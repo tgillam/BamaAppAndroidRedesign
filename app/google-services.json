@@ -1,0 +1,138 @@
+{
+  "project_info": {
+    "project_number": "175358242210",
+    "firebase_url": "https://bama-app.firebaseio.com",
+    "project_id": "bama-app",
+    "storage_bucket": "bama-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175358242210:android:e2dadf32ae0cf1c1",
+        "android_client_info": {
+          "package_name": "com.example.bamaappandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175358242210-7h6d0jm6jsqrv6cf886nucsaof7qm6in.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bamaappandroid",
+            "certificate_hash": "2d3d8b4bb4255bc51be93ee9de5b916fe8c7bc65"
+          }
+        },
+        {
+          "client_id": "175358242210-ndqo361bk5n55fjhlhsmske3o6fjqep0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaJeIa3hPY1T5BRkOVgoPyNjFiPvHeqX4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175358242210-ndqo361bk5n55fjhlhsmske3o6fjqep0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175358242210:android:b0e8f745871de3f8",
+        "android_client_info": {
+          "package_name": "com.example.bamaappredesign"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175358242210-ndqo361bk5n55fjhlhsmske3o6fjqep0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaJeIa3hPY1T5BRkOVgoPyNjFiPvHeqX4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175358242210:android:b9d9727823469812",
+        "android_client_info": {
+          "package_name": "com.example.ekjohnson4.bamaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175358242210-oeik0gkuek9p92jj010me1elnmctdgfk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ekjohnson4.bamaapp",
+            "certificate_hash": "f2a2280ecf71228d70a3d70527b136f1a429a90a"
+          }
+        },
+        {
+          "client_id": "175358242210-h1cu18rnmcb4rjd22qo41tfc29t1ubeh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ekjohnson4.bamaapp",
+            "certificate_hash": "2d3d8b4bb4255bc51be93ee9de5b916fe8c7bc65"
+          }
+        },
+        {
+          "client_id": "175358242210-ndqo361bk5n55fjhlhsmske3o6fjqep0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaJeIa3hPY1T5BRkOVgoPyNjFiPvHeqX4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175358242210-ndqo361bk5n55fjhlhsmske3o6fjqep0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
