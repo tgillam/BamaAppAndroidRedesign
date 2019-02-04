@@ -6,7 +6,6 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -26,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Add Bama logo on Action Bar
         Objects.requireNonNull(getSupportActionBar()).setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.action_bar);
 
@@ -35,23 +33,16 @@ public class MainActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         mPasswordView = findViewById(R.id.password);
-
-        Button visitorButton = findViewById(R.id.visitor);
-        visitorButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                visitorLogin();
-            }
-        });
     }
 
     //Visitor login button pressed
-    private void visitorLogin(){
+    public void visitorLogin(View v){
         Intent i = new Intent(getApplicationContext(), HomeVisitorActivity.class);
         startActivity(i);
     }
 
-    public void loginUser(View v) {
+    //Sign in button pressed, checks credentials in Firebase
+    public void studentLogin(View v) {
         //If fields are empty, throw error
         if (e1.getText().toString().equals("") && e2.getText().toString().equals("")) {
             Toast.makeText(getApplicationContext(), "Must enter in Crimson email and password.", Toast.LENGTH_SHORT).show();
@@ -66,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
                             } else {
                                 mPasswordView.setError("Password incorrect!");
                                 mPasswordView.requestFocus();
-                                Toast.makeText(getApplicationContext(), "Login unsuccessful...", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });

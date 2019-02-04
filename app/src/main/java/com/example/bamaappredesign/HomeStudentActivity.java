@@ -26,7 +26,7 @@ public class HomeStudentActivity extends AppCompatActivity {
         getSupportActionBar().setCustomView(R.layout.action_bar);
 
         auth = FirebaseAuth.getInstance();
-        profileTxt = (TextView)findViewById(R.id.welcomeText);
+        profileTxt = findViewById(R.id.welcomeText);
         user = auth.getCurrentUser();
 
         //Display user's email
