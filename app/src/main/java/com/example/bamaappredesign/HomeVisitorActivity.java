@@ -1,6 +1,7 @@
 package com.example.bamaappredesign;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.*;
 import android.view.View;
@@ -60,7 +61,7 @@ public class HomeVisitorActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main2, menu);
+        getMenuInflater().inflate(R.menu.settings, menu);
         return true;
     }
 
@@ -88,7 +89,6 @@ public class HomeVisitorActivity extends AppCompatActivity
         if (id == R.id.map) {
             // Handle the camera action
         } else if (id == R.id.events) {
-
         } else if (id == R.id.transportation) {
 
         } else if (id == R.id.emergency) {
@@ -105,4 +105,6 @@ public class HomeVisitorActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }
