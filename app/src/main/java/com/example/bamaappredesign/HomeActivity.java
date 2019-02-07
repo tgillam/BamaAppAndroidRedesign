@@ -48,7 +48,7 @@ public class HomeActivity extends AppCompatActivity
 
         }
         else{
-            //visitor login
+            //visitor login code goes here
         }
 
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -91,6 +91,10 @@ public class HomeActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.settings, menu);
+        if(!isLoggedIn){
+            MenuItem signin = menu.findItem(R.id.sign_out);
+            signin.setTitle("Sign In");
+        }
         return true;
     }
 
@@ -105,6 +109,17 @@ public class HomeActivity extends AppCompatActivity
         if (id == R.id.action_settings) {
             return true;
         }
+        if (id == R.id.sign_out){
+            if(isLoggedIn) {
+                FirebaseAuth.getInstance().signOut();
+                Intent i = new Intent(this, MainActivity.class);
+                startActivity(i);
+            }
+            else{
+                Intent i = new Intent(this, MainActivity.class);
+                startActivity(i);
+            }
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -114,7 +129,6 @@ public class HomeActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
         if (id == R.id.home) {
             if(isLoggedIn) {
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
@@ -183,14 +197,5 @@ public class HomeActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-
-    public void signOut(android.view.View view) {
-        auth.signOut();
-        finish();
-        Intent i = new Intent(this, MainActivity.class);
-        startActivity(i);
-    }
-
 
 }
