@@ -13,6 +13,14 @@
             android:icon="@drawable/map"
             android:title="Campus Map" />
         <item
+            android:id="@+id/student"
+            android:icon="@drawable/students"
+            android:title="Student" />
+        <item
+            android:id="@+id/catalog"
+            android:icon="@drawable/catalog"
+            android:title="Course Catalog" />
+        <item
             android:id="@+id/news"
             android:icon="@drawable/news"
             android:title="News" />
@@ -24,6 +32,14 @@
             android:id="@+id/transportation"
             android:icon="@drawable/transportation"
             android:title="Transportation" />
+        <item
+            android:id="@+id/directory"
+            android:icon="@drawable/folder"
+            android:title="Campus Directory" />
+        <item
+            android:id="@+id/laundry"
+            android:icon="@drawable/laundry"
+            android:title="Laundry" />
         <item
             android:id="@+id/events"
             android:icon="@drawable/events"

@@ -4,6 +4,7 @@ import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.*;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -12,20 +13,43 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Objects;
 
 import static com.example.bamaappredesign.R.layout.action_bar;
 
-public class HomeVisitorActivity extends AppCompatActivity
+public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private boolean isLoggedIn = false;
+    FirebaseAuth auth;
+    FirebaseUser user;
+    TextView profileTxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_visitor);
+        setContentView(R.layout.activity_home);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        Bundle b = getIntent().getExtras();
+        int value = -1; // or other values
+        if(b != null)
+            value = b.getInt("key");
+        //user is logged in, update layout for student
+        if(value == 1){
+            isLoggedIn = true;
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.flMain, new HomeStudentFragment());
+            ft.commit();
+
+        }
+        else{
+            //visitor login
+        }
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -46,6 +70,11 @@ public class HomeVisitorActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         Objects.requireNonNull(getSupportActionBar()).setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(action_bar);
+        if(value == 1){
+            //change menu to student menu if user is logged in
+            navigationView.getMenu().clear();
+            navigationView.inflateMenu(R.menu.student_activity_drawer);
+        }
     }
 
     @Override
@@ -86,12 +115,40 @@ public class HomeVisitorActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.map) {
-            // Handle the camera action
-        } else if (id == R.id.events) {
-        } else if (id == R.id.transportation) {
+        if (id == R.id.home) {
+            if(isLoggedIn) {
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.flMain, new HomeStudentFragment());
+                ft.commit();
+            }
+            else{
+                Intent i = new Intent(getApplicationContext(), HomeActivity.class);
+                startActivity(i);
+            }
 
-        } else if (id == R.id.emergency) {
+        }
+        else if (id == R.id.map) {
+
+        }
+        else if (id == R.id.student) {
+
+        }
+        else if (id == R.id.catalog) {
+
+        }
+        else if (id == R.id.events) {
+
+        }
+        else if (id == R.id.transportation) {
+
+        }
+        else if (id == R.id.emergency) {
+
+        }
+        else if (id == R.id.laundry) {
+
+        }
+        else if (id == R.id.directory) {
 
         }
         else if (id == R.id.news) {
@@ -104,6 +161,14 @@ public class HomeVisitorActivity extends AppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+
+    public void signOut(android.view.View view) {
+        auth.signOut();
+        finish();
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
     }
 
 

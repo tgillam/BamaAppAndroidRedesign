@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Visitor login button pressed
     public void visitorLogin(View v){
-        Intent i = new Intent(getApplicationContext(), HomeVisitorActivity.class);
+        Intent i = new Intent(getApplicationContext(), HomeActivity.class);
         startActivity(i);
     }
 
@@ -52,8 +52,12 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                Intent i = new Intent(getApplicationContext(), HomeStudentActivity.class);
-                                startActivity(i);
+                                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                                Bundle b = new Bundle();
+                                b.putInt("key", 1); //Your id
+                                intent.putExtras(b); //Put your id to your next Intent
+                                startActivity(intent);
+                                finish();
                             } else {
                                 mPasswordView.setError("Password incorrect!");
                                 mPasswordView.requestFocus();
