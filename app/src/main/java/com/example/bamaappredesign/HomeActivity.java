@@ -92,8 +92,8 @@ public class HomeActivity extends AppCompatActivity
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.settings, menu);
         if(!isLoggedIn){
-            MenuItem signin = menu.findItem(R.id.sign_out);
-            signin.setTitle("Sign In");
+            MenuItem signIn = menu.findItem(R.id.sign_out);
+            signIn.setTitle("Sign In");
         }
         return true;
     }
@@ -107,9 +107,18 @@ public class HomeActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            if(isLoggedIn) {
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.flMain, new StudentSettingsFragment());
+                ft.commit();
+            }
+            else{
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.flMain, new VisitorSettingsFragment());
+                ft.commit();
+            }
         }
-        if (id == R.id.sign_out){
+        else if (id == R.id.sign_out){
             if(isLoggedIn) {
                 FirebaseAuth.getInstance().signOut();
                 Intent i = new Intent(this, MainActivity.class);
