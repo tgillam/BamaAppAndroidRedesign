@@ -37,28 +37,20 @@ public class HomeActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         Bundle b = getIntent().getExtras();
         int value = -1; // or other values
+
         if(b != null)
             value = b.getInt("key");
+
         //user is logged in, update layout for student
         if(value == 1){
             isLoggedIn = true;
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new HomeStudentFragment());
             ft.commit();
-
         }
         else{
             //visitor login code goes here
         }
-
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -68,8 +60,10 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
         Objects.requireNonNull(getSupportActionBar()).setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(action_bar);
+
         if(value == 1){
             //change menu to student menu if user is logged in
             navigationView.getMenu().clear();
@@ -133,7 +127,6 @@ public class HomeActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.

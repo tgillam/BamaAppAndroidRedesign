@@ -5,11 +5,9 @@
     android:layout_height="match_parent"
     tools:context=".CampusMapFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <WebView
+        android:id="@+id/campus_map_webview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Campus Map Page" />
-
+        android:layout_height="match_parent"/>
 
 </FrameLayout>
