@@ -3,7 +3,9 @@
 
 ### Proof of Concept
 
+<p align="center">
 [![Proof of Concept](http://img.youtube.com/vi/DnNfLOJirgY/0.jpg)](http://www.youtube.com/watch?v=DnNfLOJirgY "Alabama Redesign App Proof of Concept")
+</p>
 
 ### About
 
