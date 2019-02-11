@@ -23,6 +23,11 @@ A general design of our app can be seen in the video above. This new implementat
 
 ### Nicholas Brunelle
 
+
+* Focus: Mock Database, Action Card, Schedule, MyTickets
+* Past experience: Plant-wide SAP implementation at Mercedes-Benz U. S. I. in Vance, AL
+* Contact: nabrunelle@crimson.ua.edu
+
 ### Tyler Gilam
 
 * Focus: Navigation Menu, Performance, Events, Links, Transportation, Laundry
