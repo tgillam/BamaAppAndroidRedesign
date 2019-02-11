@@ -22,6 +22,10 @@ A general design of our app can be seen in the video above. This new implementat
 ### Michael Ahern
 ### Nicholas Brunelle
 ### Tyler Gilam
+
+* Focus: Navigation Menu, Performance, Events, Links, Transportation, Laundry
+* Past experience: User interface development on similar redesign of Alabama app
+* Contact: tdgillam@crimson.ua.edu
 ### Ethan Johnson
 
 * Focus: Login, Home pages, Campus Map, Grades
