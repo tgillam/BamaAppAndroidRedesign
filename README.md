@@ -21,8 +21,11 @@ A general design of our app can be seen in the video above. This new implementat
 
 ### Michael Ahern
 
-### Nicholas Brunelle
+* Focus: News, Emergency, Directory, Course Catalog
+* Past experience: Data modeling intern at the MITRE Corporation in Montgomery, AL
+* Contact: mjahern@crimson.ua.edu
 
+### Nicholas Brunelle
 
 * Focus: Mock Database, Action Card, Schedule, MyTickets
 * Past experience: Plant-wide SAP implementation at Mercedes-Benz U. S. I. in Vance, AL
