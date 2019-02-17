@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.*;
 import android.support.v4.app.FragmentTransaction;
-import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -141,13 +140,11 @@ public class HomeActivity extends AppCompatActivity
                 Intent i = new Intent(getApplicationContext(), HomeActivity.class);
                 startActivity(i);
             }
-
         }
         else if (id == R.id.map) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new CampusMapFragment());
             ft.commit();
-
         }
         else if (id == R.id.student) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
