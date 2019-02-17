@@ -1,6 +1,7 @@
 package com.example.bamaappredesign;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.net.URL;
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
@@ -67,3 +69,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
+
