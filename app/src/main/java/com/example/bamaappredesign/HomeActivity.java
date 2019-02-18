@@ -134,6 +134,7 @@ public class HomeActivity extends AppCompatActivity
             if(isLoggedIn) {
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.replace(R.id.flMain, new HomeStudentFragment());
+                ft.addToBackStack(null);
                 ft.commit();
             }
             else{
@@ -144,51 +145,61 @@ public class HomeActivity extends AppCompatActivity
         else if (id == R.id.map) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new CampusMapFragment());
+            ft.addToBackStack(null);
             ft.commit();
         }
         else if (id == R.id.student) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new StudentFragment());
+            ft.addToBackStack(null);
             ft.commit();
         }
         else if (id == R.id.catalog) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new CatalogFragment());
+            ft.addToBackStack(null);
             ft.commit();
         }
         else if (id == R.id.events) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new EventsFragment());
+            ft.addToBackStack(null);
             ft.commit();
         }
         else if (id == R.id.transportation) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new TransportationFragment());
+            ft.addToBackStack(null);
             ft.commit();
         }
         else if (id == R.id.emergency) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new EmergencyFragment());
+            ft.addToBackStack(null);
             ft.commit();
         }
         else if (id == R.id.laundry) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new LaundryFragment());
+            ft.addToBackStack(null);
             ft.commit();
         }
         else if (id == R.id.directory) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new DirectoryFragment());
+            ft.addToBackStack(null);
             ft.commit();
         }
         else if (id == R.id.news) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new NewsFragment());
+            ft.addToBackStack(null);
             ft.commit();
         }
         else if (id == R.id.links) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new LinksFragment());
+            ft.addToBackStack(null);
             ft.commit();
         }
 
