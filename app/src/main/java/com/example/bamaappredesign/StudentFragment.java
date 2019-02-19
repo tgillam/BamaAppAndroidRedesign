@@ -1,6 +1,7 @@
 package com.example.bamaappredesign;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
@@ -15,7 +16,7 @@ public class StudentFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
        View inputView =  inflater.inflate(R.layout.fragment_student,
                 container,
@@ -27,6 +28,7 @@ public class StudentFragment extends Fragment {
         View.OnClickListener gradesListener = new View.OnClickListener() {
             @Override
             public void onClick(android.view.View view) {
+                assert getFragmentManager() != null;
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.flMain, new GradesFragment());
                 ft.addToBackStack(null);
@@ -39,6 +41,7 @@ public class StudentFragment extends Fragment {
         View.OnClickListener scheduleListener = new View.OnClickListener() {
             @Override
             public void onClick(android.view.View view) {
+                assert getFragmentManager() != null;
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.flMain, new ScheduleFragment());
                 ft.addToBackStack(null);
@@ -51,6 +54,7 @@ public class StudentFragment extends Fragment {
         View.OnClickListener ticketsListener = new View.OnClickListener() {
             @Override
             public void onClick(android.view.View view) {
+                assert getFragmentManager() != null;
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.flMain, new TicketsFragment());
                 ft.addToBackStack(null);
@@ -63,6 +67,7 @@ public class StudentFragment extends Fragment {
         View.OnClickListener cardListener = new View.OnClickListener() {
             @Override
             public void onClick(android.view.View view) {
+                assert getFragmentManager() != null;
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.flMain, new ActionCardFragment());
                 ft.addToBackStack(null);
