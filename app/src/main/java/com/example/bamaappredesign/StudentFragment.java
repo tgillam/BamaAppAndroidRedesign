@@ -29,6 +29,7 @@ public class StudentFragment extends Fragment {
             public void onClick(android.view.View view) {
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.flMain, new GradesFragment());
+                ft.addToBackStack(null);
                 ft.commit();
             }
         };
@@ -40,6 +41,7 @@ public class StudentFragment extends Fragment {
             public void onClick(android.view.View view) {
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.flMain, new ScheduleFragment());
+                ft.addToBackStack(null);
                 ft.commit();
             }
         };
@@ -51,6 +53,7 @@ public class StudentFragment extends Fragment {
             public void onClick(android.view.View view) {
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.flMain, new TicketsFragment());
+                ft.addToBackStack(null);
                 ft.commit();
             }
         };
@@ -62,6 +65,7 @@ public class StudentFragment extends Fragment {
             public void onClick(android.view.View view) {
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.flMain, new ActionCardFragment());
+                ft.addToBackStack(null);
                 ft.commit();
             }
         };
