@@ -28,7 +28,6 @@ class Contact {
     public Contact(String name, String phone) {//maybe int for phone?
         Name = name;
         Phone = phone;
-
     }
 
     public String getName() {
