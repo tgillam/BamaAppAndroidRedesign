@@ -51,7 +51,7 @@ public class ActionCardFragment extends Fragment
             {
                 assert getFragmentManager() != null;
                 FragmentTransaction fragTran = getFragmentManager().beginTransaction();
-                fragTran.replace(R.id.flMain, new DollarFragment());
+                fragTran.replace(R.id.flMain, new DollarsFragment());
                 fragTran.addToBackStack(null);
                 fragTran.commit();
             }
