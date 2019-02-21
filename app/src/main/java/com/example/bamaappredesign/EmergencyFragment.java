@@ -94,13 +94,13 @@ public class EmergencyFragment extends Fragment {//implements EmergencyAdapter.I
 
         listContact = new ArrayList<>();
         listContact.add(new Contact("University Police","2053485454"));
-        listContact.add(new Contact("Tuscaloosa Police","2055555543"));
-        listContact.add(new Contact("Tuscaloosa County Sheriff's Office","2055555543"));
-        listContact.add(new Contact("Northport Police","2055555543"));
-        listContact.add(new Contact("348-RIDE (after hours)","2055555543"));
-        listContact.add(new Contact("MAP (business hours)","2055555543"));
-        listContact.add(new Contact("MAP (after hours)","2055555543"));
-        listContact.add(new Contact("University Operator","2055555543"));
+        listContact.add(new Contact("Tuscaloosa Police","2053492121"));
+        listContact.add(new Contact("Tuscaloosa County Sheriff's Office","2054648672"));
+        listContact.add(new Contact("Northport Police","205339660"));
+        listContact.add(new Contact("348-RIDE (after hours)","2053457433"));
+        listContact.add(new Contact("MAP (business hours)","2053480121"));
+        listContact.add(new Contact("MAP (after hours)","205348994"));
+        listContact.add(new Contact("University Operator","2053486010"));
     }
 }
 
