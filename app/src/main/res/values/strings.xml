@@ -8,6 +8,13 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="student_fragment">Hello student!</string>
+    <string name="link_one"><a href="https://www.universitysupplystore.com/">SupeStore</a></string>
+    <string name="link_two"><a href="https://ualearn.blackboard.com/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_1_1">BlackBoard Student</a></string>
+    <string name="link_three"><a href="https://www.universitysupplystore.com/">Guardian</a></string>
+    <string name="link_four"><a href="https://itunes.apple.com/us/app/itunes-u/id490217893?mt=8">iTunesU</a></string>
+    <string name="link_five"><a href="https://uagameday.com/">Gameday</a></string>
+    <string name="link_six"><a href="https://alumni.ua.edu/">Alumni</a></string>
+    <string name="link_seven"><a href="http://wellness.ua.edu/wellbama/">WellBama</a></string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

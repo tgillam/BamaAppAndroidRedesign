@@ -9,13 +9,10 @@
             android:icon="@drawable/house"
             android:title="Home" />
         <item
-            android:id="@+id/map"
-            android:icon="@drawable/map"
-            android:title="Campus Map" />
-        <item
             android:id="@+id/student"
             android:icon="@drawable/students"
-            android:title="Student" />
+            android:title="Student">
+        </item>
         <item
             android:id="@+id/catalog"
             android:icon="@drawable/catalog"
