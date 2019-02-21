@@ -44,7 +44,7 @@ public class ActionCardFragment extends Fragment
 
         //Dining Dollars button
         Button diningDollars = inputView.findViewById(R.id.dDollars_button);
-        View.OnClickListener dDollarsListener = new View.onClickListener()
+        View.OnClickListener dDollarsListener = new View.OnClickListener()
         {
             @Override
             public void onClick(android.view.View view)
