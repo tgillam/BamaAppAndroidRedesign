@@ -15,7 +15,7 @@
     <Button
         android:id="@+id/bCash_button"
         android:layout_width="fill_parent"
-        android:layout_height="55dp"
+        android:layout_height="790dp"
         android:background="@color/colorPrimary"
         android:text="Bama Cash"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
@@ -23,10 +23,11 @@
 
     <Button
         android:id="@+id/dDollars_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="364dp"
         android:background="@color/colorPrimary"
         android:text="DINING DOLLARS"
-        android:textColor="@color/common_google_signin_btn_text_dark_default" />
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textStyle="bold" />
 
 </FrameLayout>
